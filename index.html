@@ -6,7 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
-<body>
+<body style="margin-top: 50px;">
 
   <form id="form">
     <label for="name" maxlength="25">Name</label>
@@ -14,6 +14,8 @@
     <label for="age" maxlength="3">Age</label>
     <input type="text" name="age" id="age">
     <input type="submit">
+    <p id="invalid" style="color: red; margin: 0%;" hidden>invalid input.</p>
+    <p id="error" style="margin: 0%;" hidden></p>
   </form>
   <table>
     <thead>
