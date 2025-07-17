@@ -13,6 +13,6 @@ This project uses asynchronous communication between the frontend and the backen
  - get_data.php : Retrieves all records from database.
  - toggle_status : Update the status of a user.
 
-## Demo Video 
+## Demonstration Video 
 https://github.com/user-attachments/assets/3ee92f43-f4b7-4079-992b-9a51b63be97b
 
