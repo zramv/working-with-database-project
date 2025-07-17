@@ -82,7 +82,7 @@ form.addEventListener("submit",(e)=>{
     fetchData();
     form.reset();
     //write the condition for insert XXXXXXXXXXXXXXXXXXX
-    if(data !== 'insert is successes'){
+    if(data !== 'Insert is successes'){
       errorField.textContent = data;
       invalid.removeAttribute("hidden");
       errorField.removeAttribute("hidden");
