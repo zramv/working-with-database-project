@@ -59,7 +59,7 @@ function showData(data){
 }
 
 
-
+console.log(invalid);
 //insert code =========================================
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
@@ -79,18 +79,18 @@ form.addEventListener("submit",(e)=>{
   .then(response => response.json())
   .then(data => {
     console.log("Response from PHP:",data);
+    if(!data.success){
+      errorField.textContent = data["message"];
+      invalid.removeAttribute("hidden");
+      error.removeAttribute("hidden");
+      invalid.hidden = false;
+      error.hidden = false;
+    }else{
+      invalid.hidden = true;
+      error.hidden = true;
+    }
     fetchData();
     form.reset();
-    //write the condition for insert XXXXXXXXXXXXXXXXXXX
-    if(data !== 'Insert is successes'){
-      errorField.textContent = data;
-      invalid.removeAttribute("hidden");
-      errorField.removeAttribute("hidden");
-    }else{
-      invalid.setAttribute("hidden");
-      errorField.setAttribute("hidden");
-    }
-    
   }).catch(error=>{
     console.log("ERROR:",error);
   });
