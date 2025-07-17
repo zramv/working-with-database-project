@@ -15,7 +15,7 @@ if(strlen($name) > 25 or strlen($age) > 3){
   JSON_UNESCAPED_UNICODE);
   die();
 }
-if(!is_int($age)){
+if(!is_numeric($age)){
   echo json_encode("The age must be a number",
   JSON_UNESCAPED_UNICODE);
   die();
